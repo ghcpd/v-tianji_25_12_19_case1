@@ -1,0 +1,126 @@
+.word-list-view {
+  background: white;
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.list-header {
+  margin-bottom: 30px;
+}
+
+.list-header h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: #667eea;
+}
+
+.description {
+  color: #666;
+  font-size: 1.1rem;
+  margin-bottom: 15px;
+}
+
+.stats {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.stat {
+  padding: 10px 15px;
+  background: #f5f5f5;
+  border-radius: 8px;
+  font-weight: 500;
+  color: #333;
+}
+
+.words-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.word-card {
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  padding: 20px;
+  border-radius: 12px;
+  border-left: 4px solid #667eea;
+  transition: all 0.3s ease;
+  cursor: default;
+}
+
+.word-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(102, 126, 234, 0.2);
+}
+
+.word-card.difficult {
+  border-left-color: #ff6b6b;
+  background: linear-gradient(135deg, #ffe0e0 0%, #ffcccb 100%);
+}
+
+.word-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 15px;
+  gap: 10px;
+}
+
+.word-header h3 {
+  font-size: 1.3rem;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.pronunciation {
+  font-size: 0.9rem;
+  color: #666;
+  font-style: italic;
+}
+
+.difficulty-btn {
+  background: transparent;
+  border: 2px solid #ffd700;
+  color: #ffd700;
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-size: 1.2rem;
+  transition: all 0.3s ease;
+}
+
+.difficulty-btn:hover {
+  background: #ffd700;
+  color: white;
+  transform: scale(1.1);
+}
+
+.difficulty-btn.active {
+  background: #ffd700;
+  color: white;
+}
+
+.translation {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 15px;
+  line-height: 1.5;
+}
+
+.attempts {
+  font-size: 0.85rem;
+  color: #666;
+  margin-top: 5px;
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .words-container {
+    grid-template-columns: 1fr;
+  }
+
+  .word-list-view {
+    padding: 15px;
+  }
+}
